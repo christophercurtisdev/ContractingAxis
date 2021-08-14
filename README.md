@@ -18,3 +18,21 @@ The point of this repo is to demonstrate complex data modelling consumed by an a
 - User has one ContractRequest per Contract
 
 The main packages used are laravel/passport laravel/socialite spatie/tags
+
+## Installation
+
+`composer install`
+`npm install && run dev`
+`php artisan passport:install`
+`php artisan passport:client`
+`php artisan migrate`
+`php artisan migrate --seed`
+
+May need to passport:client after migration, I'm not sure.
+
+## API Documentation (WIP)
+
+/register - email, password, name
+/login - email, password
+/contract - bearer token from login
+/team - bearer token from login
