@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\TeamResource;
 use App\Models\Team;
 use App\Services\TeamService;
 use Illuminate\Http\Request;
@@ -40,7 +41,7 @@ class TeamController extends Controller
     public function show(Team $team)
     {
         if(TeamService::canViewTeam($team, Auth::user())) {
-            return $team->fresh(); // Fresh to remove all relations
+            return new TeamResource($team->fresh()); // Fresh to remove all relations
         } else {
             return response(["message" => "Unauthenticated."], 401);
         }
