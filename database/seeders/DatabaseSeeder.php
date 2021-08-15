@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             TeamSeeder::class,
             TeamRequestSeeder::class,
             TeamUserSeeder::class,
-            ContractUserSeeder::class
+            ContractUserSeeder::class,
+            TagsSeeder::class,
         ]);
     }
 }
