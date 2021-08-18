@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTeamRequestsTable extends Migration
+class CreateContractRequestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateTeamRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('team_requests', function (Blueprint $table) {
+        Schema::create('contract_requests', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->unsigned();
-            $table->integer('team_id')->unsigned();
-            $table->text('message')->nullable();
+            $table->integer('contract_id')->unsigned();
             $table->boolean('declined')->default(false);
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ class CreateTeamRequestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('team_requests');
+        Schema::dropIfExists('contract_requests');
     }
 }

@@ -18,11 +18,10 @@ class CreateContractsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->unsignedInteger('rate');
-            $table->enum('rate_period', ['Hourly','Daily','Monthly','Yearly']);
+            $table->enum('rate_period', ['Hourly','Daily','Monthly','Yearly','Total']);
             $table->unsignedInteger('expected_duration');
-            $table->boolean('extendable');
             $table->unsignedInteger('created_by');
-            $table->boolean('open');
+            $table->boolean('public');
             $table->timestamps();
             $table->softDeletes();
         });

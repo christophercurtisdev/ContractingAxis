@@ -18,9 +18,9 @@ class ContractUserSeeder extends Seeder
         $users = User::all();
 
         foreach($users as $user) {
-            $user->contracts()->attach(random_int(1,100));
-            $user->contracts()->attach(random_int(1,100));
-            $user->contracts()->attach(random_int(1,100));
+            $user->contracts()->attach(random_int(1,50));
+            $user->contracts()->attach(random_int(1,50));
+            $user->contracts()->attach(random_int(1,50));
         }
     }
 }

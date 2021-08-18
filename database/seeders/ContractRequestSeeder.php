@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\TeamRequest;
 use Illuminate\Database\Seeder;
 
-class TeamRequestSeeder extends Seeder
+class ContractRequestSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +13,6 @@ class TeamRequestSeeder extends Seeder
      */
     public function run()
     {
-        TeamRequest::factory()
-            ->count(20)
-            ->create();
+        //
     }
 }

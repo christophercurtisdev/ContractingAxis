@@ -25,9 +25,8 @@ class ContractFactory extends Factory
             'title' => $this->faker->words(3, true),
             'description' => $this->faker->realText,
             'expected_duration' => random_int(1, 12) * 30,
-            'extendable' => (bool)random_int(0,1),
-            'created_by' => random_int(1,100),
-            'open' => true
+            'public' => (bool)random_int(0,1),
+            'created_by' => random_int(1,100)
         ];
 
         $rate_period = random_int(1, 4);
